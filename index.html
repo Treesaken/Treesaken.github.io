@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Javascript</title>
+</head>
+<body>
+    <script>
+        console.log("Muhamad Bilal Fatiha");
+        document.write("Belajar Javascript <br>")
+        let nama = "Muhamad Bilal Fatiha"
+        document.write("Nama Saya ", nama)
+    </script>
+    <hr>
+    <h3>Menghitung Luas dan Jari jari lingkaran</h3>
+
+    <input type="number" id="jari_jari" placeholder="Masukkan Jari-jari">
+    <button onclick="hitungLingkaran()">Hitung!</button>
+    <p>Luas Lingkaran : <span id="luas">0</span></p>
+    <p>Kelilig Lingkaran : <span id="keliling">0</span></p>
+
+    <script>
+        function hitungLingkaran() {
+            let jariJari = document.getElementById('jari_jari').value;
+            console.log(jariJari);
+
+            const phi = 3.14;
+            let luas = phi * (jariJari**2)
+            let keliling = 2 * phi * jariJari
+            console.log(luas, keliling);
+            
+            document.getElementById("luas").innerHTML = luas
+            document.getElementById("keliling").innerHTML = keliling
+        }
+    </script>
+
+    
+</body>
+</html>
